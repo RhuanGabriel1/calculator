@@ -9,10 +9,8 @@
     <input type="number" name="num1" required placeholder="Number 1">
     <input type="number" name="num2" required placeholder="Number 2">
     <select name="operation">
-        <option value="sum">+</option>
-        <option value="subtract">-</option>
-        <option value="multiply">*</option>
-        <option value="divide">/</option>
+        <option th:each="operation : ${T(com.rhuan.calculator.models.enums.OperationEnum).values()}"
+                th:value="${operation}" th:text="${operation}"></option>
     </select>
     <button type="submit">Calculate</button>
 </form>
