@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class CalculatorController {
 
     public static final String INDEX = "index";
+    public static final String RESULT = "result";
 
     @Autowired
     CalculatorService calculatorService;
@@ -27,7 +28,7 @@ public class CalculatorController {
                             @RequestParam OperationEnum operation,
                             Model model) {
         double result = calculatorService.calculate(num1, num2, operation);
-        model.addAttribute("result", result);
+        model.addAttribute(RESULT, result);
         return INDEX;
     }
 
