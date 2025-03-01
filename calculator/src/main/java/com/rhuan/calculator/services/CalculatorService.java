@@ -14,7 +14,6 @@ public class CalculatorService {
             case SUBTRACT -> num1 - num2;
             case MULTIPLY -> num1 * num2;
             case DIVIDE -> num1 / num2;
-            default -> 0;
         };
     }
 }
